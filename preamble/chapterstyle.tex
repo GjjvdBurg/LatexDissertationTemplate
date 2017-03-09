@@ -1,0 +1,66 @@
+% Remove spacing above the block
+\makeatletter
+\def\ttl@mkchap@i#1#2#3#4#5#6#7{%
+  \ttl@assign\@tempskipa#3\relax\beforetitleunit
+  %\vspace*{\@tempskipa}% NEW
+  \global\@afterindenttrue
+  \ifcase#5 \global\@afterindentfalse\fi
+  \ttl@assign\@tempskipb#4\relax\aftertitleunit
+  \ttl@topmode{\@tempskipb}{%
+    \ttl@select{#6}{#1}{#2}{#7}}%
+  \ttl@finmarks  % Outside the box!
+  \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
+\makeatother
+
+%% Set the chapter format
+%\titleformat{\chapter}[display]
+%	{\normalfont\color{eurgreen}}
+%	{\filleft\hspace*{-60pt}%
+%		{\setlength\fboxsep{0pt}%
+%			\colorbox{eurgreen}{\parbox[c][3cm][c]{2.5cm}{%
+%				\centering\color{white}\fontsize{80}{90}\normalfont\thechapter}%
+%			}}%
+%	}
+%	{10pt}
+%	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
+%
+%% Set the chapterformat for the numberless titles
+%\titleformat{name=\chapter,numberless}[display]
+%	{\normalfont\color{eurgreen}}
+%	{\filleft\hspace*{-60pt}%
+%		{\setlength\fboxsep{0pt}%
+%			\colorbox{white}{\parbox[c][3cm][c]{2.5cm}{%
+%				\centering\color{white}\fontsize{80}{90}\normalfont}%
+%			}}%
+%	}
+%	{10pt}
+%	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
+
+% Set the chapter format
+\titleformat{\chapter}[display]
+	{\normalfont\color{eurgreen}}
+	{\filleft\hspace*{-60pt}%
+		{\setlength\fboxsep{0pt}%
+			\rule{0pt}{2.5cm}%
+			\centering\color{eurgreen}%
+			\fontsize{80}{90}\normalfont\thechapter
+		}%
+	}
+	{10pt}
+	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
+
+% Set the chapterformat for the numberless titles
+\titleformat{name=\chapter,numberless}[display]
+	{\normalfont\color{eurgreen}}
+	{\filleft\hspace*{-60pt}%
+		{\setlength\fboxsep{0pt}%
+			\rule{0pt}{2.5cm}%
+			\centering\color{eurgreen}%
+			\fontsize{80}{90}\normalfont\phantom{0}
+		}%
+	}
+	{10pt}
+	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
+
+% set the spacing after the chapter title
+\titlespacing*{\chapter}{0pt}{0pt}{30pt}

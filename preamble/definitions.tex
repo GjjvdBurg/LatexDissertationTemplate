@@ -1,0 +1,90 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           VARIABLES                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% title
+\def\MyTitle{Template for Doctoral Dissertation}
+\def\MyDutchTitle{Sjabloon voor proefschrift}
+
+% author
+\def\MyAuthor{Short name of Author}
+\def\MyFullAuthor{Full name of Author}
+\def\MyBirthPlace{Birthplace of Author}
+
+% university etc.
+\def\MyUniversity{Name of the university}
+\def\MyInstitute{Name of the institute}
+\def\MyRector{Name of current Rector Magnificus}
+
+% defense
+\def\MyYear{2017}
+\def\MyDate{Friday January 1, \MyYear{} at 9:00 hrs}
+
+% committee (edit comitteecolophon.tex if you need more)
+\def\MyPromotor{Prof.dr. Promotor One}
+\def\MyCoPromotor{Prof. dr. Promotor Two}
+\def\MyMemberOne{Member one}
+\def\MyMemberTwo{Member two}
+
+% ERIM
+\def\MyERIMThesisIndex{TODO}
+\def\MyERIMThesisReference{TODO}
+
+% book and printer
+\def\MyISBN{TODO}
+\def\MyDesigner{TODO}
+\def\MyPrinter{TODO}
+\def\MyPaperType{TODO}
+\def\MyPrinterURL{TODO}
+
+% dedication
+\def\MyDedication{someone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              TEXT                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\urlstyle{rm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             COLORS                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{eurgreen}{RGB}{0,79,92}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              MATH                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% bold type
+\newcommand{\bft}[1]{\mathbf{#1}}
+\newcommand{\bfs}[1]{\boldsymbol{#1}}
+
+% absolute value and norm
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% trace and differential operator
+\newcommand{\mytr}{\, \text{tr }}
+\newcommand{\myd}{\mathrm{d}}
+
+% missing math operators
+\DeclareMathOperator*{\erf}{erf}
+\DeclareMathOperator*{\sign}{sign}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% theorems etc.
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+% Use math font for \mathbb from AMSMath
+%\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+%\makeatletter
+%\DeclareSymbolFontAlphabet{\math@bb}{AMSb}
+%\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         BIBLIOGRAPHY                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibpunct{(}{)}{,}{a}{,}{,}
+

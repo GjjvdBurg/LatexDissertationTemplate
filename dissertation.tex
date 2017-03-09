@@ -1,0 +1,50 @@
+\documentclass[twoside, openright, 10pt]{book}
+
+\input{./preamble/preamble.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         FRONT MATTER                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\pagestyle{frontback}
+\input{./frontmatter/frenchtitle/frenchtitle.tex}
+\input{./frontmatter/blankpage/blankpage.tex}
+\input{./frontmatter/doctoraltitle/doctoraltitle.tex}
+\input{./frontmatter/committeecolophon/committeecolophon.tex}
+\input{./frontmatter/dedication/dedication.tex}
+\input{./frontmatter/blankpage/blankpage.tex}
+\input{./frontmatter/acknowledgements/acknowledgements.tex}
+\input{./frontmatter/tableofcontents/tableofcontents.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          MAIN MATTER                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\pagestyle{mainmatter}
+\setstretch{1.15}
+\input{./mainmatter/introduction/introduction.tex}
+\input{./mainmatter/mercury/mercury.tex}
+\input{./mainmatter/gemini/gemini.tex}
+\input{./mainmatter/apollo/apollo.tex}
+\input{./mainmatter/orion/orion.tex}
+\input{./mainmatter/conclusions/conclusions.tex}
+\appendix
+\input{./mainmatter/_appendices/mercury/mercury.tex}
+\input{./mainmatter/_appendices/gemini/gemini.tex}
+\input{./mainmatter/_appendices/apollo/apollo.tex}
+\input{./mainmatter/_appendices/orion/orion.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          BACK MATTER                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\pagestyle{frontback}
+\input{./backmatter/bibliography/bibliography.tex}
+\input{./backmatter/summary/summary.tex}
+\input{./backmatter/samenvatting/samenvatting.tex}
+\input{./backmatter/aboutauthor/aboutauthor.tex}
+\input{./backmatter/erimpublications/erimpublications.tex}
+
+\end{document}

@@ -1,0 +1,55 @@
+% section formatting in text
+\titleformat{\section}[hang]
+	{\normalfont\Large\scshape\color{eurgreen}\raggedright}
+	{\normalfont\Large\scshape\color{eurgreen}\thesection.}
+	{1em}
+	{\textls[90]{#1}}
+
+% subsection formatting in text
+\titleformat{\subsection}[hang]
+	{\normalfont\large\color{eurgreen}\itshape\raggedright}
+	{\normalfont\thesubsection.}
+	{1em}
+	{#1}
+
+% chapter formatting in toc
+\titlecontents{chapter}
+	[1.5em]
+	{\addvspace{1.5em}}
+	{\contentslabel{1.3em}}
+	{\hspace*{-1.3em}}
+	{\titlerule*[.5pc]{}\contentspage}[\addvspace{.5em}]
+
+% section formatting in toc
+\titlecontents{section}
+	[3.8em]
+	{\addvspace{0.75em}}
+	{\contentslabel{2.3em}\itshape}
+	{\hspace*{-2.3em}}
+	{\titlerule*[1pc]{.}\contentspage}
+
+% list of figures formatting
+\titlecontents{figure}
+	[2.3em]
+	{\addvspace{1.0em}}
+	{\contentslabel{2.3em}}
+	{\hspace*{0em}}
+	{\hspace*{5pt}\titlerule*[1.0pc]{.}\contentspage}[]
+
+% list of tables formatting
+\titlecontents{table}
+	[2.3em]
+	{\addvspace{1.0em}}
+	{\contentslabel{2.3em}}
+	{\hspace*{0em}}
+	{\hspace*{5pt}\titlerule*[1.0pc]{.}\contentspage}[]
+
+%list of algorithms formatting
+\makeatletter
+\renewcommand*{\listof}[2]{%
+	\@ifundefined{ext@#1}{\float@error{#1}}{%
+		\@namedef{l@#1}{\l@figure}\float@listhead{#2}%
+		\begingroup\setlength{\parskip}{\z@}%
+			\@starttoc{\@nameuse{ext@#1}}%
+		\endgroup}}
+\makeatother

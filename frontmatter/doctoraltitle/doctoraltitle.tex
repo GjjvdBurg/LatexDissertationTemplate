@@ -1,0 +1,40 @@
+\newgeometry{hmargin=3cm,bottom=24mm,top=30mm}
+\thispagestyle{empty}
+\newcommand*{\thetitlepage}{\begingroup%
+	\centering
+	\vspace*{0.02\textheight}
+	{\large\textbf{\MyTitle}}\\
+	\vskip\baselineskip
+	\MyDutchTitle\\
+	\vspace*{0.05\textheight}
+	\vspace*{0.05\textheight}
+	Thesis\\
+	\vspace*{0.05\textheight}
+	\vspace*{0.05\textheight}
+	to obtain the degree of Doctor from the\\
+	\MyUniversity\\
+	by command of the\\
+	rector magnificus\\
+	\hspace{1mm}\\
+	\MyRector\\
+	\hspace{1mm}\\
+	and in accordance with the decision of the Doctorate Board.\\
+	\vspace*{0.05\textheight}
+	\vspace*{0.05\textheight}
+	The public defence shall be held on\\
+	\MyDate\\
+	\hspace{1mm}\\
+	by\\
+	\hspace{1mm}\\
+	\textsc{\MyFullAuthor}\\
+	born in \MyBirthPlace.\\
+	\vfill
+	\begin{figure*}[!h]
+		\includegraphics[scale=0.75]{./images/EURlogo_new_left_crop}
+		\hfill
+		\includegraphics[scale=0.75]{./images/EURlogo_new_right_crop}
+	\end{figure*}
+	\endgroup}
+\thetitlepage
+\newpage
+\restoregeometry

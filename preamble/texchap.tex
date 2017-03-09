@@ -1,0 +1,35 @@
+\documentclass[a5paper, 11pt, openright]{book}
+
+\usepackage{blindtext}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{fouriernc}
+
+\definecolor{myblue}{RGB}{0,79,92}
+
+\titleformat{\chapter}[display]
+	{\normalfont\bfseries\color{myblue}}
+	{\filleft\hspace*{-60pt}%
+		{\setlength\fboxsep{0pt}%
+			\colorbox{myblue}{\parbox[c][3cm][c]{2.5cm}{%
+					\centering\color{white}\fontsize{80}{90}\normalfont\thechapter}%
+			}}%
+	}
+	{10pt}
+	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
+\begin{document}
+\chapter{Introduction}
+\blindtext
+\blindtext
+
+\chapter{SparseStep: Approximating the Counting Norm for Sparse 
+	Regularization}
+\blindtext
+\blindtext
+
+\end{document}

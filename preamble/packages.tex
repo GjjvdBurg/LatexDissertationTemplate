@@ -1,0 +1,73 @@
+
+% math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% language
+\usepackage[english]{babel}
+
+% colors
+\usepackage[pdftex, dvipsnames]{xcolor}
+
+% figures
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+% fonts
+\usepackage{fouriernc} % Fourier math with NC Schoolbook
+\usepackage{BOONDOX-cal} % Boondox calligraphy for \mathcal
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{setspace}
+
+% section title and toc
+\usepackage[explicit]{titlesec}
+\usepackage[dotinlabels]{titletoc}
+
+% algorithms
+\usepackage[chapter]{algorithm}
+\usepackage{algpseudocode}
+
+% captions
+\usepackage[%
+	margin=10pt,
+	font=small,
+	textfont={it},
+	labelfont={color=eurgreen},
+	labelsep=colon]{caption}
+\captionsetup[algorithm]{labelsep=period}
+
+% references
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+
+% pagestyle
+\newcommand*\GetTextWidth[3][\normalfont\normalsize]{{#1%
+		\settowidth{#2}{abcdefghijklmnopqrstuvwxyz}%
+		\setlength{#2}{0.03193#2}%
+		\addtolength{#2}{0.44961pt}%
+		\setlength{#2}{#3#2}%
+		\global#2=#2}}
+\newlength\bringhurstwdt
+\GetTextWidth{\bringhurstwdt}{66}
+
+\usepackage[%
+	paperwidth=165mm,
+	paperheight=240mm,
+	inner=32mm, outer=28mm,
+	bottom=24mm,
+	top=30mm,
+	]{geometry}
+%% Uncomment the inner/outer line above, or the geometry command below
+%\geometry{textwidth=\bringhurstwdt}
+\special{papersize=165mm,240mm}
+\usepackage{afterpage}
+\usepackage{emptypage}
+
+% headers
+\usepackage{fancyhdr}
+
+% only for template, remove in your version
+\usepackage{blindtext}

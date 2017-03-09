@@ -1,0 +1,17 @@
+*.log
+*.fls
+*.aux
+*.fdb_latexmk
+*.blg
+*.bbl
+*.out
+*.table
+*.dat
+*.script
+*.swp
+*.gnuplot
+*.loa
+*.dvi
+*.lot
+*.lof
+*.toc
