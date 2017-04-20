@@ -24,17 +24,31 @@
 \mainmatter
 \pagestyle{mainmatter}
 \setstretch{1.15}
+
 \input{./mainmatter/introduction/introduction.tex}
+
 \input{./mainmatter/mercury/mercury.tex}
+\begin{subappendices}
+	\input{./mainmatter/_appendices/mercury/mercury.tex}
+\end{subappendices}
+
 \input{./mainmatter/gemini/gemini.tex}
+\begin{subappendices}
+	\input{./mainmatter/_appendices/gemini/gemini.tex}
+\end{subappendices}
+
 \input{./mainmatter/apollo/apollo.tex}
+\begin{subappendices}
+	\input{./mainmatter/_appendices/apollo/apollo.tex}
+\end{subappendices}
+
 \input{./mainmatter/orion/orion.tex}
+\begin{subappendices}
+	\input{./mainmatter/_appendices/orion/orion.tex}
+\end{subappendices}
+
 \input{./mainmatter/conclusions/conclusions.tex}
-\appendix
-\input{./mainmatter/_appendices/mercury/mercury.tex}
-\input{./mainmatter/_appendices/gemini/gemini.tex}
-\input{./mainmatter/_appendices/apollo/apollo.tex}
-\input{./mainmatter/_appendices/orion/orion.tex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                          BACK MATTER                               %
