@@ -14,7 +14,7 @@ The visual design of the template is loosely based on Robert Bringhurts's [The
 Elements of Typographic 
 Style](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style).
 
-The LaTeX setup is constructed to make the template modular and easy to use.  
+The LaTeX setup is constructed to make the template modular and easy to use. 
 It consists of the following four main directories:
 
 1. ``preamble``: all the LaTeX definitions, packages, and commands that are 
@@ -24,7 +24,7 @@ It consists of the following four main directories:
 3. ``mainmatter``: here is where the chapters and the corresponding appendices 
    will be defined. In the template the ``blindtext`` package is used to add 
    some filler text, but this should of course be removed. Note that we use a 
-   single appendix for each chapter, and that all appendices come at the end.  
+   single appendix for each chapter, and that all appendices come at the end. 
    Each chapter also maintains its own ``BiBtex`` file.
 4. ``backmatter``: summaries, bibliography, about the author pages, etc.
 
@@ -45,21 +45,11 @@ To keep the template organized, definitions are used for the common fields in
 the template. These can be set in the ``definitions.tex`` file in the 
 ``preamble`` folder.
 
-## Dutch Last Names
-
-Since I'm Dutch, I've paid extra attention to the correct formatting of Dutch 
-last names in the references. The correct capitalization of Dutch last names 
-(for example "van den Burg"), is e.g. "Van den Burg et al. (2017)" when citing 
-a paper and "G.J.J. van den Burg ,... " in the reference list (assuming the 
-plainnat bibliography style). To facilitate this, additional commands and 
-usage instructions are provided in the ``commands.tex`` file. Note that these 
-commands are not used by default, so you'll have to enable them in 
-``commands.tex`` and ``bibliography.tex`` respectively.
-
 ## Notes
 
 1. The template includes it's own ``book.cls`` so we can add a List of 
    Algorithms.
 2. The template includes it's own version of ``BOONDOX-cal.sty`` because there 
    was an invalid ``filedate`` field in an earlier version.
-
+3. The template uses its own BiBTeX style, which may or may not be what you 
+   want.

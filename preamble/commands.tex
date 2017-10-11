@@ -34,42 +34,6 @@
 % Renew description label
 \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}{#1}}
 
-% Commands for handling of Dutch last names in references and text
-% Usage: In BibTeX use the command \DutchLastName{A}{B}{C} where A determines 
-% the sorting of the entry in the bibliography, B determines how the name 
-% appears in the text, and C determines how the name appears in the 
-% bibliography. Examples: 
-%
-% author={{\DutchLastName{De}{De}{de}} Leeuw}
-%
-% would sort this under the "D", appear in the text as "De Leeuw" and in the 
-% bibliography as "de Leeuw". The simpler DLN command takes only two 
-% arguments, and assumes you will always want to sort on the capitalization, 
-% so \DutchLastName{De}{De}{de} = \DLN{De}{de}.
-%
-% Important: The braces {} around the command in the author name are 
-% necessary:
-%
-%     author={{\DutchLastName{De}{De}{de}} Leeuw}
-%             ^                          ^
-% otherwise the sorting will add it to the D from "DutchLastName".
-%
-% From http://tex.stackexchange.com/q/40747/
-% using: http://www.tex.ac.uk/faq/FAQ-ltxhash.html
-%
-\newcommand{\DutchLastNamesBib}{%
-	\DeclareRobustCommand{\DutchLastName}[3]{##3}
-	\DeclareRobustCommand{\DLN}[2]{##2}%
-}
-
-\newcommand{\DutchLastNamesMain}{%
-	\DeclareRobustCommand{\DutchLastName}[3]{##2}
-	\DeclareRobustCommand{\DLN}[2]{##1}%
-}
-
-% Uncomment the next line to use these commands
-%\DutchLastNamesMain{}
-
 % Can be used for fancy formatting in the ERIM PhD Series pages
 \newcommand{\erimphd}[6]{%
 	\vbox{%
