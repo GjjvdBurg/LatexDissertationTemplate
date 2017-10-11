@@ -14,8 +14,32 @@
 	\renewcommand*{\sectionmark}[1]{\markright{##1}}
 	\renewcommand{\headrulewidth}{0pt}%
 
-	\fancyhead[LE]{\small\scshape\thepage\hspace{2em}\nouppercase{\leftmark}}
-	\fancyhead[RO]{\small\scshape\nouppercase{\rightmark}\hspace{2em}\thepage}
+	\fancyhead[LE]{%
+		{\small\thepage}%
+		\hspace{2em}%
+		{\small\scshape\nouppercase{\leftmark}}%
+	}
+	\fancyhead[RO]{%
+		{\small\scshape\nouppercase{\rightmark}}%
+		\hspace{2em}%
+		{\small\thepage}%
+	}
+}
+
+\fancypagestyle{bibliography}{%
+	\fancyhf{}
+	\renewcommand*{\chaptermark}[1]{\markboth{##1}{}}
+	\renewcommand*{\sectionmark}[1]{\markright{##1}}
+	\renewcommand{\headrulewidth}{0pt}%
+
+	\fancyhead[LE]{%
+		{\small\thepage}%
+		\hspace{2em}%
+		{\small\scshape\nouppercase{\leftmark}}%
+	}
+	\fancyhead[RO]{%
+		{\small\thepage}%
+	}
 }
 
 \fancypagestyle{plain}{%

@@ -15,6 +15,7 @@
 \input{./frontmatter/committeecolophon/committeecolophon.tex}
 \input{./frontmatter/dedication/dedication.tex}
 \input{./frontmatter/blankpage/blankpage.tex}
+\pagestyle{frontback}
 \input{./frontmatter/acknowledgements/acknowledgements.tex}
 \input{./frontmatter/tableofcontents/tableofcontents.tex}
 
@@ -27,6 +28,11 @@
 
 \input{./mainmatter/introduction/introduction.tex}
 
+% Change this image if you want an image on the part page
+\def\partimage{./images/empty_image/empty_image.pdf}
+\part{\texorpdfstring{Bla Bla}{Part I: Bla Bla}}
+
+
 \input{./mainmatter/mercury/mercury.tex}
 \begin{subappendices}
 	\input{./mainmatter/_appendices/mercury/mercury.tex}
@@ -36,6 +42,10 @@
 \begin{subappendices}
 	\input{./mainmatter/_appendices/gemini/gemini.tex}
 \end{subappendices}
+
+% Change this image if you want an image on the part page
+\def\partimage{./images/empty_image/empty_image.pdf}
+\part{\texorpdfstring{First Blood Part 2}{Part II: First Blood}}
 
 \input{./mainmatter/apollo/apollo.tex}
 \begin{subappendices}
@@ -53,12 +63,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                          BACK MATTER                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ensure backmatter not in last part
+\bookmarksetup{startatroot}
+\addtocontents{toc}{\bigskip\bigskip}
 \backmatter
-\pagestyle{frontback}
+\pagestyle{bibliography}
 \input{./backmatter/bibliography/bibliography.tex}
+\pagestyle{frontback}
 \input{./backmatter/summary/summary.tex}
 \input{./backmatter/samenvatting/samenvatting.tex}
 \input{./backmatter/aboutauthor/aboutauthor.tex}
+\input{./backmatter/portfolio/portfolio.tex}
 \input{./backmatter/erimpublications/erimpublications.tex}
 
 \end{document}

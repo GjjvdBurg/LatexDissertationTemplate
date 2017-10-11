@@ -17,14 +17,22 @@
 	\renewcommand{\contentsname}%
 	{Table of Contents}%
 }
+% for with using babel
+\addto\captionsenglish{%
+	\renewcommand{\contentsname}%
+	{Table of Contents}%
+}
 
 % Command for a blind footnote
 \newcommand\blfootnote[1]{%
 	\begingroup
-		\renewcommand\thefootnote{}\footnote{#1}%
+		\renewcommand\thefootnote{}\footnote{\hskip-13pt #1}%
 		\addtocounter{footnote}{-1}%
 	\endgroup
 }
+
+% Renew description label
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}{#1}}
 
 % Commands for handling of Dutch last names in references and text
 % Usage: In BibTeX use the command \DutchLastName{A}{B}{C} where A determines 
@@ -61,3 +69,17 @@
 
 % Uncomment the next line to use these commands
 %\DutchLastNamesMain{}
+
+% Can be used for fancy formatting in the ERIM PhD Series pages
+\newcommand{\erimphd}[6]{%
+	\vbox{%
+		\hangindent=\parindent
+		\hangafter=1
+		\noindent
+		#1,
+		\emph{#2},
+		#3: #4,
+		#5,
+		\mbox{\url{#6}}.\\%
+	}%
+}

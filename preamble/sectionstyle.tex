@@ -12,37 +12,29 @@
 	{1em}
 	{#1}
 
-% chapter formatting in toc
-\titlecontents{chapter}
-	[1.5em]
-	{\addvspace{1.5em}}
-	{\contentslabel{1.3em}}
-	{\hspace*{-1.3em}}
-	{\titlerule*[.5pc]{}\contentspage}[\addvspace{.5em}]
-
 % section formatting in toc
 \titlecontents{section}
 	[3.8em]
 	{\addvspace{0.75em}}
 	{\contentslabel{2.3em}\itshape}
 	{\hspace*{-2.3em}}
-	{\titlerule*[1pc]{.}\contentspage}
+	{\hspace*{5pt}\titlerule*[1pc]{.}\hspace*{2pt}\contentspage}[\addvspace{0.1em}]
 
 % list of figures formatting
 \titlecontents{figure}
-	[2.3em]
+	[2.8em]
 	{\addvspace{1.0em}}
-	{\contentslabel{2.3em}}
+	{\contentslabel{2.8em}}
 	{\hspace*{0em}}
-	{\hspace*{5pt}\titlerule*[1.0pc]{.}\contentspage}[]
+	{\hspace*{5pt}\titlerule*[1.0pc]{.}\hspace*{2pt}\contentspage}[]
 
 % list of tables formatting
 \titlecontents{table}
-	[2.3em]
+	[2.8em]
 	{\addvspace{1.0em}}
-	{\contentslabel{2.3em}}
+	{\contentslabel{2.8em}}
 	{\hspace*{0em}}
-	{\hspace*{5pt}\titlerule*[1.0pc]{.}\contentspage}[]
+	{\hspace*{5pt}\titlerule*[1.0pc]{.}\hspace*{2pt}\contentspage}[]
 
 %list of algorithms formatting
 \makeatletter

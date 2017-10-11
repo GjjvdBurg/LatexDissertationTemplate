@@ -1,3 +1,4 @@
+% # vim: ft=tex
 % Remove spacing above the block
 \makeatletter
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
@@ -36,12 +37,20 @@
 %	{10pt}
 %	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
 
+% chapter formatting in toc
+\titlecontents{chapter}
+	[1.5em]
+	{\addvspace{1.5em}}
+	{\contentslabel{1.3em}}
+	{\hspace*{-1.3em}}
+	{\titlerule*[.5pc]{}\contentspage}[\addvspace{.5em}]
+
 % Set the chapter format
-\titleformat{\chapter}[display]
+\titleformat{name=\chapter}[display]
 	{\normalfont\color{eurgreen}}
 	{\filleft\hspace*{-60pt}%
 		{\setlength\fboxsep{0pt}%
-			\rule{0pt}{2.5cm}%
+			\rule{0pt}{2.50cm}%
 			\centering\color{eurgreen}%
 			\fontsize{80}{90}\normalfont\thechapter
 		}%
@@ -54,13 +63,13 @@
 	{\normalfont\color{eurgreen}}
 	{\filleft\hspace*{-60pt}%
 		{\setlength\fboxsep{0pt}%
-			\rule{0pt}{2.52cm}%
+			\rule{0pt}{2.525cm}%
 			\centering\color{eurgreen}%
 			\fontsize{80}{90}\normalfont\phantom{0}
 		}%
 	}
 	{10pt}
-	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip6pt\LARGE#1}
+	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip10pt\LARGE#1}
 
 % set the spacing after the chapter title
 \titlespacing*{\chapter}{0pt}{0pt}{30pt}
