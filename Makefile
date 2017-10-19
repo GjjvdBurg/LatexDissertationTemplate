@@ -4,8 +4,7 @@ all: $(DOCUMENT) ## compile the document
 
 $(DOCUMENT): ## compile the paper with latexmk
 	sleep 1
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode\
-		--shell-escape" $@.tex
+	latexmk -pdf -pdflatex="pdflatex --shell-escape" $@.tex
 
 clean: ## clean the build files (also in the image directory)
 	latexmk -CA

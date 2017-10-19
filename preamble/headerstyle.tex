@@ -1,29 +1,23 @@
-\fancypagestyle{mainmatter}{%
-	\fancyhf{}
-	\renewcommand*{\chaptermark}[1]{\markboth{##1}{}}
-	\renewcommand*{\sectionmark}[1]{\markright{##1}}
-	\renewcommand{\headrulewidth}{0pt}%
-
-	\fancyhead[LE]{\small\scshape\thepage\hspace{2em}\nouppercase{\leftmark}}
-	\fancyhead[RO]{\small\scshape\nouppercase{\rightmark}\hspace{2em}\thepage}
-}
-
 \fancypagestyle{frontback}{%
 	\fancyhf{}
 	\renewcommand*{\chaptermark}[1]{\markboth{##1}{}}
-	\renewcommand*{\sectionmark}[1]{\markright{##1}}
 	\renewcommand{\headrulewidth}{0pt}%
-
-	\fancyhead[LE]{%
-		{\small\thepage}%
-		\hspace{2em}%
-		{\small\scshape\nouppercase{\leftmark}}%
-	}
 	\fancyhead[RO]{%
-		{\small\scshape\nouppercase{\rightmark}}%
-		\hspace{2em}%
-		{\small\thepage}%
+		{\small\itshape\nouppercase{\leftmark}}%
 	}
+	\fancyfoot[LE]{\small\thepage}
+	\fancyfoot[RO]{\small\thepage}
+}
+
+\fancypagestyle{mainmatter}{%
+	\fancyhf{}
+	\renewcommand*{\chaptermark}[1]{\markboth{##1}{}}
+	\renewcommand{\headrulewidth}{0pt}%
+	\fancyhead[RO]{%
+		{\small\itshape\thechapter.\hspace{.5em}\nouppercase{\leftmark}}%
+	}
+	\fancyfoot[LE]{\small\thepage}
+	\fancyfoot[RO]{\small\thepage}
 }
 
 \fancypagestyle{bibliography}{%
@@ -31,20 +25,21 @@
 	\renewcommand*{\chaptermark}[1]{\markboth{##1}{}}
 	\renewcommand*{\sectionmark}[1]{\markright{##1}}
 	\renewcommand{\headrulewidth}{0pt}%
-
-	\fancyhead[LE]{%
-		{\small\thepage}%
-		\hspace{2em}%
-		{\small\scshape\nouppercase{\leftmark}}%
-	}
 	\fancyhead[RO]{%
-		{\small\thepage}%
+		{\small\itshape\nouppercase{\leftmark}}%
 	}
+	\fancyfoot[LE]{\small\thepage}
+	\fancyfoot[RO]{\small\thepage}
 }
 
 \fancypagestyle{plain}{%
 	\fancyhf{}
 	\renewcommand{\headrulewidth}{0pt}%
 	\renewcommand{\footrulewidth}{0pt}
-	\fancyfoot[C]{\small\thepage}
+	\fancyfoot[LE]{
+		\small\thepage
+	}
+	\fancyfoot[RO]{
+		\small\thepage
+	}
 }

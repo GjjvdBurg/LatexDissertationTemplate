@@ -36,14 +36,10 @@
 
 % Can be used for fancy formatting in the ERIM PhD Series pages
 \newcommand{\erimphd}[6]{%
-	\vbox{%
-		\hangindent=\parindent
-		\hangafter=1
-		\noindent
-		#1,
-		\emph{#2},
-		#3: #4,
-		#5,
-		\mbox{\url{#6}}.\\%
-	}%
+	\noindent
+	\begin{minipage}[t]{\textwidth}
+		\hangindent1em\hangafter1\noindent
+		#1, #2, \emph{#3}, #4, #5, \mbox{\url{#6}}.
+	\end{minipage}%
+	\vskip.75\baselineskip
 }

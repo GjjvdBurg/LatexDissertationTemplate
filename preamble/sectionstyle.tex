@@ -1,16 +1,17 @@
 % section formatting in text
 \titleformat{\section}[hang]
-	{\normalfont\Large\scshape\color{eurgreen}\raggedright}
-	{\normalfont\Large\scshape\color{eurgreen}\thesection.}
+	{\normalfont\scshape\color{eurgreen}\raggedright}
+	{\normalfont\scshape\color{eurgreen}\thesection}
 	{1em}
 	{\textls[90]{#1}}
 
 % subsection formatting in text
 \titleformat{\subsection}[hang]
-	{\normalfont\large\color{eurgreen}\itshape\raggedright}
-	{\normalfont\thesubsection.}
-	{1em}
+	{\normalfont\color{eurgreen}\itshape\raggedright}
+	{\normalfont\thesubsection}
+	{.5em}
 	{#1}
+	[\vspace{0.5em}]
 
 % section formatting in toc
 \titlecontents{section}

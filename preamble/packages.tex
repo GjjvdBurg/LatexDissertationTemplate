@@ -1,3 +1,4 @@
+\usepackage[utf8]{inputenc}
 
 % math
 \usepackage{amsmath}
@@ -14,7 +15,7 @@
 \usepackage[pdftex, dvipsnames]{xcolor}
 
 % figures
-\usepackage{subfigure}
+\usepackage[center]{subfigure}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
@@ -29,7 +30,7 @@
 \usepackage{setspace}
 
 % section title and toc
-\usepackage[explicit,newparttoc]{titlesec}
+\usepackage[explicit,newparttoc,rigidchapters]{titlesec}
 \usepackage[dotinlabels]{titletoc}
 
 % appendix
@@ -38,15 +39,18 @@
 % algorithms
 \usepackage[chapter]{algorithm}
 \usepackage{algpseudocode}
+\usepackage{etoolbox}
+% use normal text in algorithms instead of bold
+\AtBeginEnvironment{algorithmic}{\let\textbf\relax}
 
 % captions
 \usepackage[%
 	margin=10pt,
-	font=small,
+	font={},
 	textfont={it},
-	labelfont={color=eurgreen},
-	labelsep=colon]{caption}
-\captionsetup[algorithm]{labelsep=period}
+	labelfont={color=eurgreen, sc},
+	labelsep=endash]{caption}
+\captionsetup[algorithm]{labelsep=period, labelfont=rm}
 
 % references
 \usepackage{natbib}
@@ -75,9 +79,13 @@
 \usepackage[%
 	paperwidth=165mm,
 	paperheight=240mm,
-	inner=30mm, outer=24mm,
-	bottom=24mm, top=30mm
+	inner=25mm,
+	top=20mm,
+	outer=20mm,
+	bottom=28mm,
+	footskip=14mm
 	]{geometry}
+
 \special{papersize=165mm,240mm}
 \usepackage{afterpage}
 \usepackage{emptypage}

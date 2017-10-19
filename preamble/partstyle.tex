@@ -1,43 +1,23 @@
 % # vim: ft=tex
 
+% Initially clear the partimage
+\def\partimage{}
+
 \titleformat{\part}[display]
 	{\vfill}
 	{\color{eurgreen}\centering{\fontsize{80}{96}\normalfont\thepart}}
 	{20pt}
 	{\centering\color{eurgreen}\scshape\Huge\textls[80]{#1}%
-	%{\centering\scshape\Huge\textls[80]{#1}%
-		{%
-			%\vskip3\baselineskip%
-			\vfill
+	{%
+		\vfill
+		\ifx\partimage\empty
+			{}
+		\else
 			\includegraphics[height=.18\textheight]{\partimage}%
-			\vfill
-			%\vskip3\baselineskip
-		}
+		\fi
+		\vfill
 	}
-
-%\titlecontents{part}%
-%	[0pt]
-%	{%
-%		\protect%
-%		\centering%
-%		\addvspace{1.5em}% 15pt
-%		\titlerule%
-%		\addvspace{1.2ex}} % 1.2 ex
-%	{\partname~\thecontentslabel:~\thepart}{}
-%	{}
-%	[%
-%	\addvspace{1.2ex}% 0.7ex
-%	\titlerule%
-%	\addvspace{0pt}% 1.5ex
-%	]
-
-%\titlecontents{part}%
-%	[2.0em]
-%	{\addvspace{2.0em}\large\color{eurgreen}\scshape}
-%	{\contentslabel{1.55em}}
-%	{}
-%	{\titlerule*[.5pc]{}\contentspage}
-%	[\addvspace{.5em}]
+}
 
 \titlecontents{part}%
 	[0.2em]

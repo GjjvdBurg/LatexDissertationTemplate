@@ -13,30 +13,6 @@
   \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
 \makeatother
 
-%% Set the chapter format
-%\titleformat{\chapter}[display]
-%	{\normalfont\color{eurgreen}}
-%	{\filleft\hspace*{-60pt}%
-%		{\setlength\fboxsep{0pt}%
-%			\colorbox{eurgreen}{\parbox[c][3cm][c]{2.5cm}{%
-%				\centering\color{white}\fontsize{80}{90}\normalfont\thechapter}%
-%			}}%
-%	}
-%	{10pt}
-%	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
-%
-%% Set the chapterformat for the numberless titles
-%\titleformat{name=\chapter,numberless}[display]
-%	{\normalfont\color{eurgreen}}
-%	{\filleft\hspace*{-60pt}%
-%		{\setlength\fboxsep{0pt}%
-%			\colorbox{white}{\parbox[c][3cm][c]{2.5cm}{%
-%				\centering\color{white}\fontsize{80}{90}\normalfont}%
-%			}}%
-%	}
-%	{10pt}
-%	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
-
 % chapter formatting in toc
 \titlecontents{chapter}
 	[1.5em]
@@ -48,7 +24,7 @@
 % Set the chapter format
 \titleformat{name=\chapter}[display]
 	{\normalfont\color{eurgreen}}
-	{\filleft\hspace*{-60pt}%
+	{\vskip15pt\filleft\hspace*{-60pt}%
 		{\setlength\fboxsep{0pt}%
 			\rule{0pt}{2.50cm}%
 			\centering\color{eurgreen}%
@@ -56,20 +32,20 @@
 		}%
 	}
 	{10pt}
-	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip4pt\LARGE#1}
+	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip10pt\LARGE#1}
 
 % Set the chapterformat for the numberless titles
 \titleformat{name=\chapter,numberless}[display]
 	{\normalfont\color{eurgreen}}
-	{\filleft\hspace*{-60pt}%
+	{\vskip15pt\filleft\hspace*{-60pt}%
 		{\setlength\fboxsep{0pt}%
-			\rule{0pt}{2.525cm}%
+			\rule{0pt}{2.50cm}%
 			\centering\color{eurgreen}%
-			\fontsize{80}{90}\normalfont\phantom{0}
+			\fontsize{80}{90}\normalfont\phantom{1}
 		}%
 	}
 	{10pt}
 	{\titlerule[2.5pt]\vskip3pt\titlerule\vskip10pt\LARGE#1}
 
 % set the spacing after the chapter title
-\titlespacing*{\chapter}{0pt}{0pt}{30pt}
+\titlespacing*{\chapter}{0pt}{0pt}{170pt}
